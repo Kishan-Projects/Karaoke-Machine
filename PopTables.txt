@@ -1,0 +1,309 @@
+
+-- User Table:
+
+INSERT INTO User
+	VALUES
+		('00000000000000000000', 'Amain'),
+        ('00000000000000000001', 'Alex'),
+        ('00000000000000000002', 'Evan'),
+        ('00000000000000000003', 'Brian'),
+        ('00000000000000000004', 'Charlie'),
+        ('00000000000000000005', 'Ian'),
+        ('00000000000000000006', 'Jayna'),
+        ('00000000000000000007', 'Nathan'),
+        ('00000000000000000008', 'Logan'),
+        ('00000000000000000009', 'Emma'),
+        ('00000000000000000010', 'Krya');
+		
+		
+-- insert into payment table right before QueueItem is populated
+
+-- Song Tables (Song, SongVersion, Contributor):
+
+INSERT INTO Song
+	VALUES
+		-- Character Cover Album 1
+		("CC101", "Not Enough Sleep", "Kana Asumi"),
+		("CC102", "Dancing Star", "Kanae Itou"),
+		("CC103", "I Want to See His Smile", "Ayana Taketatsu"),
+		("CC104", "Platinum", "Aoi Yuuki"),
+		("CC105", "Do You Remember Love?", "Nao Toyama"),
+		("CC106", "ANGEL NIGHT ~The Place where Angels are~", "Saori Hayami"),
+		("CC107", "Round Dance Revolution", "Ami Koshimizu"),
+		("CC108", "Twinkle Star", "Kana Hanazawa"),
+		("CC109", "Dearest", "Aki Toyosaki and Atsuko Tanaka"),
+		("CC110", "Motto! MOTTO! Tokimeki", "Hiro Shimono and Kanae Itou"),
+		
+		-- Character Cover Album 2
+		("CC201", "Assemble Insert", "Kanae Itou"),
+		("CC202", "Unyielding Wish", "Ayana Taketatsu and Ayahi Takagaki"),
+		("CC203", "Dang Dang I'm Curious About It", "Kana Asumi"),
+		("CC204", "To the Sky...", "Yuka Iguchi"),
+		("CC205", "The Dream Will Not End ~The Dripping Droplets of Time~", "Kaori Nazuka"),
+		("CC206", "dis~", "Saori Hayami"),
+		("CC207", "Ru-Ru-Ru-Russian Roulette", "Megumi Toyoguchi"),              -- surely this song name is fine given someone could put "Revolver" by The Beatles, and this is college not a public school
+		("CC208", "Raison d'etre", "Kana Hanazawa"),
+		("CC209", "Full of Memories", "Nao Toyama"),
+		("CC210", "Girls are...", "Hiro Shimono and Kanae Itou"),
+		
+		-- 10 more songs, let's see...
+		("GOK03", "God only knows -Secrets of the Goddess-", "Oratorio The World God Only Knows"),
+		("C4309", "Open Your Heart", "Crush 40"),
+		("C4301", "Live and Learn", "Crush 40"),
+		("C4911", "What I'm Made Of...", "Crush 40"),
+		("SH507", "Never Turn Back", "Crush 40"),
+		
+		("SR617", "Catch Me If You Can", "Runblebee"),
+		("SH701", "Seven Rings In Hand", "Steve Conte, Oz Noy, Chewtaro Moritake, Will Lee, and Clint De Ganon"),
+		("SH503", "Waking Up", "Julien-K"),
+		("MF201", "Who I Am", "Magna-Fi"),
+		("SH903", "With Me", "All Ends")
+		;
+		
+		
+		
+INSERT INTO SongVersion
+	VALUES
+		("CC101-0", "CC101", "Solo"),
+		("CC102-0", "CC102", "Solo"),
+		("CC103-0", "CC103", "Solo"),
+		("CC104-0", "CC104", "Solo"),
+		("CC105-0", "CC105", "Solo"),
+		("CC106-0", "CC106", "Solo"),
+		("CC107-0", "CC107", "Solo"),
+		("CC108-0", "CC108", "Solo"),
+		("CC109-0", "CC109", "Solo"),
+		("CC109-1", "CC109", "Duet"),
+		("CC110-0", "CC110", "Solo"),
+		("CC110-1", "CC110", "Duet"),
+		
+		("CC201-0", "CC201", "Solo"),
+		("CC202-0", "CC202", "Solo"),
+		("CC202-1", "CC202", "Duet"),
+		("CC203-0", "CC203", "Solo"),
+		("CC204-0", "CC204", "Solo"),
+		("CC205-0", "CC205", "Solo"),
+		("CC206-0", "CC206", "Solo"),
+		("CC207-0", "CC207", "Solo"),
+		("CC208-0", "CC208", "Solo"),
+		("CC209-0", "CC209", "Solo"),
+		("CC210-0", "CC210", "Solo"),
+		("CC210-1", "CC210", "Duet"),
+		
+		("GOK03-0", "GOK03", "Solo"),
+		("C4309-0", "C4309", "Solo"),
+		("C4301-0", "C4301", "Solo"),
+		("C4911-0", "C4911", "Solo"),
+		("SH507-0", "SH507", "Solo"),
+		
+		("SR617-0", "SR617", "Solo"),
+		("SH701-0", "SH701", "Solo"),
+		("SH503-0", "SH503", "Solo"),
+		("MF201-0", "MF201", "Solo"),
+		("SH903-0", "SH903", "Solo"),
+		("SH903-1", "SH903", "Duet")
+		;
+		
+		
+		
+INSERT INTO Contributor
+	VALUES
+		-- SongID, Name,  Performer, Writer, Composer
+		("CC101", "Kana Asumi", "Yes", " ", " "),
+		("CC101", "CHICKS", " ", "Yes", "Yes"),
+		("CC101", "Takuya Watanabe", " ", " ", "Yes"),
+		("CC102", "Kanae Itou", "Yes", " ", " "),
+		("CC102", "Izumi Kobayashi", " ", " ", "Yes"),
+		("CC102", "Wataru Maeguchi", " ", " ", "Yes"),
+		("CC102", "Akira Ito", " ", "Yes", " "),
+		("CC103", "Ayana Taketatsu", "Yes", " ", " "),
+		("CC103", "Rie Hamada", " ", " ", "Yes"),
+		("CC103", "Takuya Watanabe", " ", " ", "Yes"),
+		("CC103", "Miyu Yuzuki", " ", "Yes", " "),
+		("CC104", "Aoi Yuuki", "Yes", " ", " "),
+		("CC104", "Yoko Kanno", " ", " ", "Yes"),
+		("CC104", "Kaoru Okubo", " ", " ", "Yes"),
+		("CC104", "Yuho Iwasato", " ", "Yes", " "),
+		("CC105", "Nao Toyama", "Yes", " ", " "),
+		("CC105", "Kazuhiko Kato", " ", " ", "Yes"),
+		("CC105", "Kaoru Okubo", " ", " ", "Yes"),
+		("CC105", "Kazumi Yasui", " ", "Yes", " "),
+		("CC106", "Saori Hayami", "Yes", " ", " "),
+		("CC106", "Masaya Matsuura", " ", " ", "Yes"),
+		("CC106", "Wataru Maeguchi", " ", " ", "Yes"),
+		("CC106", "Yukio Matsuo", " ", "Yes", " "),
+		("CC107", "Ami Koshimizu", "Yes", " ", " "),
+		("CC107", "Toshiro Yabuki", " ", " ", "Yes"),
+		("CC107", "Takeshi Masuda", " ", " ", "Yes"),
+		("CC107", "Masami Okui", " ", "Yes", " "),
+		("CC108", "Kana Hanazawa", "Yes", " ", " "),
+		("CC108", "Kaoru Okubo", " ", " ", "Yes"),
+		("CC108", "Hiroshi Sasaki", " ", " ", "Yes"),
+		("CC108", "Satomi Kawasaki", " ", " ", "Yes"),
+		("CC108", "Uran", " ", "Yes", " "),
+		("CC109", "Aki Toyosaki", "Yes", " ", " "),
+		("CC109", "Atsuko Tanaka", "Yes", " ", " "),
+		("CC109", "Toshiyuki Omori", " ", " ", "Yes"),
+		("CC109", "Takeshi Masuda", " ", " ", "Yes"),
+		("CC109", "Satomi Kawasaki", " ", " ", "Yes"),
+		("CC109", "Satomi Arimori", " ", "Yes", " "),
+		("CC110", "Hiro Shimono", "Yes", " ", " "),
+		("CC110", "Kanae Itou", "Yes", " ", " "),
+		("CC110", "Metal Yuhki", " ", " ", "Yes"),
+		("CC110", "Wataru Maeguchi", " ", " ", "Yes"),
+		("CC110", "SANOPPI", " ", "Yes", " "),
+		("CC110", "2-ban wo Tsukuranakucha ne! Jikkou Iinkai", " ", "Yes", " "),
+		
+		
+		
+		("CC201", "Kanae Itou", "Yes", " ", " "),
+		("CC201", "Kyoko Matsumiya", " ", "Yes", "Yes"),
+		("CC201", "Wataru Maeguchi", " ", " ", "Yes"),
+		("CC202", "Ayana Taketatsu", "Yes", " ", " "),
+		("CC202", "Ayahi Takagaki", "Yes", " ", " "),
+		("CC202", "Naomi Tamura", " ", "Yes", "Yes"),
+		("CC202", "Hiroto Ishikawa", " ", " ", "Yes"),
+		("CC202", "Takuya Watanabe", " ", " ", "Yes"),
+		("CC203", "Kana Asumi", "Yes", " ", " "),
+		("CC203", "Tetsuji Hayashi", " ", " ", "Yes"),
+		("CC203", "Hiroshi Sasaki", " ", " ", "Yes"),
+		("CC203", "Masao Urino", " ", "Yes", " "),
+		("CC204", "Yuka Iguchi", "Yes", " ", " "),
+		("CC204", "Taku Iwasaki", " ", " ", "Yes"),
+		("CC204", "Takeshi Masuda", " ", " ", "Yes"),
+		("CC204", "Alice Sato", " ", "Yes", " "),
+		("CC205", "Kaori Nazuka", "Yes", " ", " "),
+		("CC205", "Toshiyuki Sekiguchi", " ", " ", "Yes"),
+		("CC205", "Hiroshi Sasaki", " ", " ", "Yes"),
+		("CC205", "Shoko Fujibayashi", " ", "Yes", " "),
+		("CC206", "Saori Hayami", "Yes", " ", " "),
+		("CC206", "M Rie", " ", " ", "Yes"),
+		("CC206", "Kaoru Okubo", " ", " ", "Yes"),
+		("CC206", "Yuho Iwasato", " ", "Yes", " "),
+		("CC207", "Megumi Toyoguchi", "Yes", " ", " "),
+		("CC207", "Meiko Nakahara", " ", "Yes", "Yes"),
+		("CC207", "Takuya Watanabe", " ", " ", "Yes"),
+		("CC208", "Kana Hanazawa", "Yes", " ", " "),
+		("CC208", "Rui Nagai", " ", " ", "Yes"),
+		("CC208", "Teppei Shimizu", " ", " ", "Yes"),
+		("CC208", "ACKO", " ", "Yes", " "),
+		("CC209", "Nao Toyama", "Yes", " ", " "),
+		("CC209", "Kisaburo Suzuki", " ", " ", "Yes"),
+		("CC209", "Wataru Maeguchi", " ", " ", "Yes"),
+		("CC209", "Yoko Aki", " ", "Yes", " "),
+		("CC210", "Hiro Shimono", "Yes", " ", " "),
+		("CC210", "Kanae Itou", "Yes", " ", " "),
+		("CC210", "Asei Kobayashi", " ", " ", "Yes"),
+		("CC210", "Satomi Kawasaki", " ", " ", "Yes"),
+		("CC210", "Kazuya Senke", " ", "Yes", " "),
+		
+		
+		
+		("GOK03", "Saori Hayami", "Yes", " ", " "),
+		("GOK03", "Takeshi Masuda", "Yes", " ", " "),
+		("GOK03", "Wataru Maeguchi", "Yes", "Yes", "Yes"),
+		("GOK03", "Emi Nishida", " ", "Yes", " "),
+		("GOK03", "Daisensei Muroya Strings", "Yes", " ", " "),
+		("GOK03", "Honda Koushirou", " ", " ", "Yes"),     -- part of why I picked this song was because it had Composers (it is an oratorio after all)
+		("GOK03", "Satomi Kawasaki", "Yes", " ", "Yes"),
+		("GOK03", "Enami Tetsushi", " ", " ", "Yes"),
+		("GOK03", "Kimura Kamara", " ", " ", "Yes"),
+		("GOK03", "Aoyama Shigeru", " ", " ", "Yes"),
+		("GOK03", "Kaoru", " ", " ", "Yes"),
+		("GOK03", "Ishizuka Rei", " ", " ", "Yes"),
+		("GOK03", "mixakissa", " ", " ", "Yes"),
+		
+		("C4309", "Jun Senoue", "Yes", "Yes", "Yes"),
+		("C4309", "Kenichi Tokoi", " ", " ", "Yes"),
+		("C4309", "Takahiro Fukada", " ", "Yes", " "),
+		("C4309", "Johnny Gioeli", "Yes", " ", " "),
+		("C4309", "Naoto Shibata", "Yes", " ", " "),
+		("C4309", "Hirotsugu Homma", "Yes", " ", " "),
+		
+		("C4301", "Jun Senoue", "Yes", " ", "Yes"),
+		("C4301", "Johnny Gioeli", "Yes", "Yes", " "),
+		("C4301", "Takeshi Taneda", "Yes", " ", " "),
+		("C4301", "Katsuji Kirita", "Yes", " ", " "),
+		
+		("C4911", "Jun Senoue", "Yes", " ", "Yes"),
+		("C4911", "Johnny Gioeli", "Yes", "Yes", " "),
+		("C4911", "Takeshi Taneda", "Yes", " ", " "),
+		("C4911", "Mark Schulman", "Yes", " ", " "),
+		
+		("SH507", "Jun Senoue", "Yes", " ", "Yes"),
+		("SH507", "Johnny Gioeli", "Yes", "Yes", " "),
+		("SH507", "Takeshi Taneda", "Yes", " ", " "),
+		("SH507", "Toru Kawamura", "Yes", " ", " "),
+		("SH507", "Yutaka Minobe", "Yes", " ", " "),
+		
+		("SR617", "Runblebee", "Yes", "Yes", " "),
+		("SR617", "Kenichi Tokoi", " ", " ", "Yes"),
+		
+		("SH701", "Runblebee", " ", "Yes", " "),
+		("SH701", "Kenichi Tokoi", " ", " ", "Yes"),
+		("SH701", "Steve Conte", "Yes", " ", " "),
+		("SH701", "Oz Noy", "Yes", " ", " "),
+		("SH701", "Chewtaro Moritake", "Yes", " ", " "),
+		("SH701", "Will Lee", "Yes", " ", " "),
+		("SH701", "Clint De Ganon", "Yes", " ", " "),
+		
+		("SH503", "Julien-K", "Yes", " ", " "),
+		("SH503", "Ryan Shuck", " ", "Yes", " "),
+		("SH503", "Amir Derakh", " ", " ", "Yes"),
+		
+		("MF201", "Mike Szuter", "Yes", " ", " "),
+		("MF201", "Chris Brady", "Yes", " ", " "),
+		("MF201", "Rob Kley", "Yes", " ", " "),
+		("MF201", "Charlie Smaldino", "Yes", " ", " "),
+		
+		("SH903", "Jun Senoue", "Yes", " ", "Yes"),
+		("SH903", "Johnny Gioeli", " ", "Yes", " "),
+		("SH903", "Takeshi Taneda", "Yes", " ", " "),
+		("SH903", "Emma Gelotte", "Yes", " ", " "),
+		("SH903", "Tinna Karlsdotter", "Yes", " ", " "),
+		("SH903", "Marty Friedman", "Yes", " ", " "),
+		("SH903", "Bobby Jarzombek", "Yes", " ", " ")
+		;
+		
+
+		
+-- create payments
+INSERT INTO Payment
+	VALUES
+		("0000000001", "00000000000000000000", 0.00, '2024-12-04 18:30:00'),
+		("0000000002", "00000000000000000001", 0.00, '2024-12-04 18:31:00'),
+		("0000000003", "00000000000000000002", 0.00, '2024-12-04 18:32:00'),
+		("0000000004", "00000000000000000003", 0.00, '2024-12-04 18:33:00'),
+		("0000000005", "00000000000000000004", 0.00, '2024-12-04 18:34:00'),
+		
+		("0000000006", "00000000000000000005", 10.00, '2024-12-04 18:45:00'),
+		("0000000007", "00000000000000000006", 15.00, '2024-12-04 18:46:00'),
+		("0000000008", "00000000000000000007", 5.00, '2024-12-04 18:47:00'),
+		("0000000009", "00000000000000000008", 50.00, '2024-12-04 18:48:00'),
+		("0000000010", "00000000000000000009", 25.00, '2024-12-04 18:49:00')
+		;
+		
+		
+-- queue up songs
+INSERT INTO QueueItem
+		VALUES
+		-- items have a queuetype of either "Free" for the free queue
+		-- or "Premium" for the accelerated queue
+			("Free", "CC109-1", "0000000001", "00000000000000000000"),
+			("Free", "SH701-0", "0000000002", "00000000000000000001"),
+			("Free", "GOK03-0", "0000000003", "00000000000000000002"),
+			("Free", "CC110-1", "0000000004", "00000000000000000003"),
+			("Free", "CC101-0", "0000000005", "00000000000000000004"),
+			
+			("Premium", "CC207-0", "0000000006", "00000000000000000005"),
+			("Premium", "CC202-1", "0000000007", "00000000000000000006"),
+			("Premium", "CC205-0", "0000000008", "00000000000000000007"),
+			("Premium", "SR617-0", "0000000009", "00000000000000000008"),
+			("Premium", "CC107-0", "0000000010", "00000000000000000009")
+			;
+
+
+
+
+
+
